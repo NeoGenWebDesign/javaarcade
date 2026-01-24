@@ -1,0 +1,120 @@
+body {
+            background-image: url("assets/Tetris2JS.png");
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex; align-items: center; justify-content: center;
+            height: 100vh; margin: 0; overflow: hidden;
+            background-size: 100% 100%;
+            background-position: center;
+            background-blend-mode: lighten;
+        }
+        #game-container {
+            display: flex; 
+            gap: 20px; 
+            background: #2a2a2e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 50px rgba(250, 246, 2, 0.5);
+        }
+        /* The container that aligns overlays to the canvas */
+        .canvas-area {
+            position: relative;
+            width: 240px; /* Matches canvas width */
+            height: 400px; /* Matches canvas height */
+            
+        }
+        canvas { 
+            border: solid 2px #444;
+            background-color: #000;
+            box-shadow: 0 0 30px rgba(2, 192, 250, 0.425);
+        }
+        /* Overlay Screens - now perfectly aligned to .canvas-area */
+        .overlay {
+            position: absolute; 
+            top: 0; 
+            left: 0;
+            width: 100%; 
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center;
+            z-index: 20; 
+            text-align: center;
+            border: solid 2px transparent; /* Match canvas border spacing */
+        }
+
+        .side-panel { 
+            display: flex; 
+            flex-direction: column; 
+            width: 140px; 
+        }
+        .info-box {
+            text-align: center; 
+            background: #333;
+            padding: 8px; 
+            border-radius: 5px; 
+            margin-bottom: 15px;
+            box-shadow: 0 0 50px rgba(2, 192, 250, 0.425);
+        }
+        .label { 
+            font-size: 0.7em; 
+            color: #aaa; 
+            text-transform: uppercase; 
+            margin-bottom: 3px; 
+        }
+        .value { 
+            font-size: 1.2em; 
+            font-weight: bold; 
+            color: #0DC2FF; 
+        }
+        h1 { 
+            color: #FF0D72; 
+            margin: 0 0 20px 0; 
+            font-size: 1.8em; 
+        }
+        .btn {
+            background: #0DC2FF; 
+            color: white; 
+            border: none;
+            padding: 10px 20px; 
+            font-size: 1em; 
+            cursor: pointer;
+            border-radius: 5px; 
+            transition: 0.2s;
+        }
+        .btn:hover { 
+            background: #3877FF; 
+            transform: scale(1.05); 
+        }
+        .game-nav {
+            width: 100%;
+            background-color: #00000000;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;  
+        }
+        .back-btn {
+            color: #fbfdfbfd;
+            background-color: #070707;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bolder;
+            padding: 0.5rem 1rem;
+            margin-left: 20px;
+            border: 3px solid #05e8f87a;
+            transition: all 0.3s;
+            border-radius: 10px;
+            height: 40px;
+            width: 220px;
+            text-align: center;
+            align-content: center;
+        }
+
+        .back-btn:hover {
+            background: #8d03929d;
+            color: #eeff0186;
+            text-shadow: 0 0 10px #703809;
+            box-shadow: inset 0 0 10px #05e8f8, 0 0 20px #05e8f8;
+        }

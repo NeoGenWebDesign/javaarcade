@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROBO-CENTIPEDE-JS</title>
+    <link rel="stylesheet" href="CentiJS.css">
+    <link rel="icon" type="image/png" href="https://i.ibb.co/9Hh6fMLQ/JavaArcade.png" sizes="200x200">
+</head>
+<body>
+
+    <nav class="game-nav">
+        <a href="../../index.html" class="back-btn">BACK TO ARCADE HOME</a>
+        </nav>
+    <h1 style="font-size: 50px; margin-top: 5%; color:chartreuse; text-shadow: 0 0 10px #f0f002; border: 3px solid rgb(99, 98, 98); border-radius: 5px; background-color: #4b4a4ab7; box-shadow: 10px 0 10px #5af301; margin-top: auto;">ROBO-CENTIPEDE</h1>
+    <p style="color: #faf604; text-shadow: 0 0 5px #3ffa07; font-weight: 800; font-size: 25px; border: 3px solid rgb(99, 99, 99); border-radius: 5px; background-color: #4b4a4ab7; box-shadow: 10px 0 10px #5af301; margin-top: auto;">Use Mouse to Move • Click to Shoot</p>
+    <div id="ui-bar">
+        <div>SCORE: <span id="score" class="stat-val">0</span></div>
+        <div>SECTOR: <span id="level" class="stat-val">1</span></div>
+        <div>UNITS: <span id="lives" class="stat-val">3</span></div>
+        <div>HI: <span id="hi-score" class="stat-val">0</span></div>
+    </div>
+
+    <div id="game-container">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+        <div id="start-screen" class="overlay">
+            <h1 style="font-size: 50px; margin: 0;">ROBO-CENTIPEDE</h1>
+            <p style="color: #ff00ff;">VERSION 2.0</p>
+            <button id="startBtn">START SYSTEM</button>
+        </div>
+
+        <div id="game-over-screen" class="overlay hidden">
+            <h1 style="color: #ff0055;">CORE BREACHED</h1>
+            <div id="new-hi-ui" class="hidden">
+                <p>NEW HIGH SCORE DETECTED</p>
+                <label for="playerName">Enter Name:</label>
+                <input type="text" id="playerName" maxlength="3" placeholder="Name" title="Enter your 3-letter name" style="font-size: 20px; width: 80px; text-align: center;">
+                <button onclick="saveHighScore()">SAVE</button>
+            </div>
+            <button onclick="location.reload()">REBOOT</button>
+        </div>
+    </div>
+
+    <script src="CentiJS.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROBO-COMMAND: SKYLINE DEFENDER</title>
+    <link rel="stylesheet" href="Command.css">
+</head>
+<body>
+
+    <nav class="game-nav">
+        <a href="../../index.html" class="back-btn">BACK TO ARCADE HOME</a>
+        </nav>
+    <div id="ui-bar">
+        <div>Score: <span id="score" class="stat-val">0</span></div>
+        <div>Bombs: <span id="bombs" class="stat-val">1</span></div>
+        <div>Hi-Score: <span id="hi-score-val" class="stat-val">0</span></div>
+    </div>
+
+    <div id="game-container">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        
+        <div id="start-screen" class="overlay">
+            <h1 style="color: #00ffff; font-size: 40px;">ROBO-COMMAND</h1>
+            <p style="color: #ff00ff;">DEFEND THE CITIES // [P] TO PAUSE</p>
+            <button id="startBtn">INITIALIZE</button>
+        </div>
+
+        <div id="pause-screen" class="overlay hidden">
+            <h1 style="color: #ffff00; font-size: 40px;">COMMAND PAUSED</h1>
+            <p style="color: #fff;">TACTICAL STANDBY... PRESS [P] TO RESUME</p>
+        </div>
+
+        <div id="name-entry" class="overlay hidden">
+            <h1 style="color: #ffff00;">NEW RECORD</h1>
+            <p>ENTER TAG (3 LETTERS)</p>
+            <input type="text" id="playerName" maxlength="3" autocomplete="off" placeholder="TAG">
+            <br><button onclick="saveScore()">UPLOAD DATA</button>
+        </div>
+
+        <div id="game-over-screen" class="overlay hidden">
+            <h1 style="color: #ff0055;">SYSTEM OFFLINE</h1>
+            <div id="high-score-list" style="margin: 10px 0; color: #ff00ff;"></div>
+            <button onclick="location.reload()">REBOOT</button>
+        </div>
+    </div>
+
+    <div id="legend-bar">
+        <div class="legend-item"><span class="p-icon" style="background:#ff0"></span> [T] TRIPLE</div>
+        <div class="legend-item"><span class="p-icon" style="background:#0ff"></span> [F] FAST</div>
+        <div class="legend-item"><span class="p-icon" style="background:#f00"></span> [R] REBUILD</div>
+        <div class="legend-item"><span class="p-icon" style="background:#0f0"></span> [B] BOMB (SPACEBAR)</div>
+        <div class="legend-item"><b>[P] PAUSE</b></div>
+    </div>
+    <script src="Command.js"></script>
+</body>
+</html>

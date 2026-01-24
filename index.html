@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Arcade - Retro Gaming</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="https://i.ibb.co/9Hh6fMLQ/JavaArcade.png" sizes="200x200">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">⚙️</span>
+                <span class="logo-text"><img src="assets/JavaArcade.png" alt="JavaScript Arcade Logo"></span>
+                <span class="logo-icon">⚙️</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">HOME</a></li>
+                <li><a href="#games" class="nav-link">GAMES</a></li>
+                <li><a href="#about" class="nav-link">ABOUT</a></li>
+                <li><a href="#contact" class="nav-link">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-title">
+                <h1 class="title-main">JAVASCRIPT</h1>
+                <h1 class="title-arcade">ARCADE</h1>
+            </div>
+            <div class="hero-logo">
+                <div class="logo-container">
+                    <svg viewBox="0 0 100 100" class="arcade-logo">
+                        <rect x="10" y="10" width="80" height="80" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="30" cy="30" r="8" fill="currentColor"/>
+                        <circle cx="70" cy="30" r="8" fill="currentColor"/>
+                        <rect x="25" y="50" width="50" height="15" fill="currentColor"/>
+                        <circle cx="25" cy="75" r="3" fill="currentColor"/>
+                        <circle cx="50" cy="75" r="3" fill="currentColor"/>
+                        <circle cx="75" cy="75" r="3" fill="currentColor"/>
+                    </svg>
+                </div>
+            </div>
+            <p class="hero-subtitle">Enter the digital realm. Play. Compete. Dominate.</p>
+        </div>
+        <div class="scanlines"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-header">
+            <h2 class="section-title">ABOUT</h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="about-content">
+            <div class="about-box">
+                <p class="about-text">
+                    Welcome to <span class="highlight">JavaScript Arcade</span> - your gateway to nostalgic retro gaming 
+                    in the digital age. We're a free platform dedicated to bringing you a collection of classic arcade games 
+                    reimagined with modern JavaScript technology.
+                </p>
+                <p class="about-text">
+                    Experience the golden age of arcade gaming with a cyberpunk twist. Whether you're a seasoned gamer or 
+                    just looking for some casual fun, JavaScript Arcade offers something for everyone. All our games are 
+                    completely free to play, no downloads required, no subscriptions needed.
+                </p>
+                <p class="about-text">
+                    Level up your skills, chase high scores, and relive the glory days of arcade gaming - right from your browser.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games" class="games">
+        <div class="section-header">
+            <h2 class="section-title">GAMES</h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="games-grid">
+            <!-- ASTROBLAST-JS -->
+            <div class="game-card">
+                <div class="game-image">
+                    <div class="game-placeholder">★</div>
+                </div>
+                <div class="game-info">
+                    <h3 class="game-title">ASTROBLAST-JS</h3>
+                    <p class="game-description">A reboot of the popular Asteroids game. Destroy asteroids and survive waves of cosmic debris.</p>
+                </div>
+                <a href="games/ASTROBLAST-JS/index.html" class="game-link">PLAY NOW</a>
+            </div>
+
+            <!-- BriX-JS -->
+            <div class="game-card">
+                <div class="game-image">
+                    <div class="game-placeholder">🧱</div>
+                </div>
+                <div class="game-info">
+                    <h3 class="game-title">BriX-JS</h3>
+                    <p class="game-description">A classic Brickbreaker/Arkanoid remake. Bounce, break, and eliminate all bricks.</p>
+                </div>
+                <a href="games/BriX-JS/index.html" class="game-link">PLAY NOW</a>
+            </div>
+
+            <!-- ROBO-CENTIPEDE-JS -->
+            <div class="game-card">
+                <div class="game-image">
+                    <div class="game-placeholder">🐛</div>
+                </div>
+                <div class="game-info">
+                    <h3 class="game-title">ROBO-CENTIPEDE-JS</h3>
+                    <p class="game-description">A rework of the classic centipede/millipede game. Eliminate the mechanical serpents.</p>
+                </div>
+                <a href="games/ROBO-CENTIPEDE-JS/index.html" class="game-link">PLAY NOW</a>
+            </div>
+
+            <!-- CYBER-FROGGER-JS -->
+            <div class="game-card">
+                <div class="game-image">
+                    <div class="game-placeholder">🐸</div>
+                </div>
+                <div class="game-info">
+                    <h3 class="game-title">CYBER-FROGGER-JS</h3>
+                    <p class="game-description">A remake of frogger. Navigate through traffic and reach the other side safely.</p>
+                </div>
+                <a href="games/CYBER-FROGGER-JS/index.html" class="game-link">PLAY NOW</a>
+            </div>
+
+            <!-- NEO-INVADERS-JS -->
+            <div class="game-card">
+                <div class="game-image">
+                    <div class="game-placeholder">👾</div>
+                </div>
+                <div class="game-info">
+                    <h3 class="game-title">NEO-INVADERS-JS</h3>
+                    <p class="game-description">A space invaders clone. Defend Earth from the invasion of alien forces.</p>
+                </div>
+                <a href="games/NEO-INVADERS-JS/index.html" class="game-link">PLAY NOW</a>
+            </div>
+
+            <!-- ROBO-PONG-JS -->
+            <div class="game-card">
+                <div class="game-image">
+                    <div class="game-placeholder">🏓</div>
+                </div>
+                <div class="game-info">
+                    <h3 class="game-title">ROBO-PONG-JS</h3>
+                    <p class="game-description">The classic Pong game returns. Face off against the AI in this timeless battle.</p>
+                </div>
+                <a href="games/ROBO-PONG-JS/index.html" class="game-link">PLAY NOW</a>
+            </div>
+
+            <!-- Snake2DJS -->
+            <div class="game-card">
+                <div class="game-image">
+                    <div class="game-placeholder">🐍</div>
+                </div>
+                <div class="game-info">
+                    <h3 class="game-title">SNAKE-2D-JS</h3>
+                    <p class="game-description">Guide your snake to consume food and grow. Avoid hitting walls and yourself.</p>
+                </div>
+                <a href="games/SNAKE-2D-JS/index.html" class="game-link">PLAY NOW</a>
+            </div>
+
+            <!-- TetrisJS -->
+            <div class="game-card">
+                <div class="game-image">
+                    <div class="game-placeholder">⬛</div>
+                </div>
+                <div class="game-info">
+                    <h3 class="game-title">BLOCKDROP-JS</h3>
+                    <p class="game-description">Stack falling tetrominoes and complete lines. How high can you score?</p>
+                </div>
+                <a href="games/BLOCKDROP-JS/index.html" class="game-link">PLAY NOW</a>
+            </div>
+
+            <div class="game-card">
+                <div class="game-image">
+                    <div class="game-placeholder">🚀</div>
+                </div>
+                <div class="game-info">
+                    <h3 class="game-title">ROBO-COMMAND</h3>
+                    <p class="game-description">Defend your cyber city from a relentless missile attack!</p>
+                </div>
+                <a href="games/ROBO-COMMAND/index.html" class="game-link">PLAY NOW</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <h2 class="section-title">CONTACT</h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="contact-content">
+            <div class="contact-box">
+                <h3 class="contact-heading">GET IN TOUCH</h3>
+                <p class="contact-text">Have questions, feedback, or want to collaborate? Reach out to us!</p>
+                
+                <div class="contact-links">
+                    <div class="contact-item">
+                        <span class="contact-label">EMAIL:</span>
+                        <a class="contact-link" href="mailto:neogenwebdesign@gmail.com?subject=Inquiry&amp;body=Hello%2C%0A%0AI%20am%20interested%20in%20collaborating%20or%20would%20like%20to%20identify%20a%20bug.%0A%0AThanks.%0A">neogenwebdesign@gmail.com</a>
+                    </div>
+                </div>
+
+                <h3 class="contact-heading socials-heading">FOLLOW US</h3>
+                <div class="socials">
+                    <a href="https://github.com/neogenwebdesign/javascriptarcade/" class="social-link" aria-label="GitHub">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 JavaScript Arcade. All rights reserved. | Built with ❤️ and JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

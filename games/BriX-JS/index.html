@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BriX-JS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://i.ibb.co/9Hh6fMLQ/JavaArcade.png" sizes="200x200">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Brix.css">
+</head>
+<body>
+    <nav class="game-nav">
+        <a href="../../index.html" class="back-btn">BACK TO ARCADE HOME</a>
+        </nav>
+    <h1>BriX-JS</h1>
+    <div id="header">
+        <div>LIVES: <span id="lives" class="stat-val">3</span></div>
+        <div>SCORE: <span id="score" class="stat-val">0</span></div>
+        <div>HIGH: <span id="highScore" class="stat-val">CPU - 0</span></div>
+    </div>
+
+    <div id="game-container">
+        <div id="screen-start" class="overlay">
+            <h1>SYSTEM BOOT</h1>
+            <p>CLICK TO START | MOUSE WILL BE LOCKED TO AREA</p>
+            <p style="font-size: 0.8em; color: #666;">(Press ESC to release mouse)</p>
+            <button class="btn" onclick="initGame()">START ENGINE</button>
+        </div>
+
+        <div id="screen-pause" class="overlay" style="display:none;">
+            <h1>STANDBY</h1>
+            <button class="btn" onclick="togglePause()">RESUME</button>
+        </div>
+
+        <div id="screen-next" class="overlay" style="display:none;">
+            <h1>SECTOR CLEAR</h1>
+            <p id="level-msg"></p>
+            <button class="btn" onclick="startLevel()">NEXT SECTOR</button>
+        </div>
+
+        <div id="screen-over" class="overlay" style="display:none;">
+            <h1>CRITICAL FAILURE</h1>
+            <input type="text" id="nameInput" maxlength="3" placeholder="ID">
+            <button class="btn" onclick="saveHighScore()">RECORD DATA</button>
+        </div>
+
+        <canvas style="box-shadow: 0 0 20px #ff33ff77; border-radius: 20px;" id="gameCanvas" width="800" height="600"></canvas>
+    </div>
+
+    <div id="legend">
+        <div class="legend-item">
+            <div class="icon-circle" style="background: #ff3333;">L</div>
+            <div class="desc"><b>Lasers:</b> Fire twin red bolts for 10s using Click or Spacebar.</div>
+        </div>
+        <div class="legend-item">
+            <div class="icon-circle" style="background: #ffff33;">M</div>
+            <div class="desc"><b>Multi-Ball:</b> Instantly spawns 3 additional spheres into play.</div>
+        </div>
+        <div class="legend-item">
+            <div class="icon-circle" style="background: #ff33ff;">G</div>
+            <div class="desc"><b>Gravity Magnet:</b> Ball sticks to paddle for 10s. Release with Click/Space.</div>
+        </div>
+        <div class="legend-item">
+            <div class="icon-circle" style="background: #33ffff;">W</div>
+            <div class="desc"><b>Wide Paddle:</b> Expands robot chassis for 10s to increase catch range.</div>
+        </div>
+        <div class="legend-item" style="grid-column: span 2; border-top: 1px solid #333; padding-top: 10px;">
+            <div class="icon-circle" style="background: #ff9900; box-shadow: 0 0 10px #ff9900;">U</div>
+            <div class="desc"><b>ULTIMATE PLASMA (RARE):</b> Ball becomes a piercing sun for 10s, cutting through all bricks without bouncing.</div>
+        </div>
+    </div>
+
+<script src="Brix.js"></script>
+</body>
+</html>

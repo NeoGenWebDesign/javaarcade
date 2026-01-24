@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CYBER-FROGGER-JS</title>
+    <link rel="icon" type="image/png" href="https://i.ibb.co/9Hh6fMLQ/JavaArcade.png" sizes="200x200">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="frog.css">
+</head>
+<body>
+    
+    <nav class="game-nav">
+        <a href="../../index.html" class="back-btn">BACK TO ARCADE HOME</a>
+        </nav>
+    <h1 class="neon-orange title" style="color: coral; font-size: 50px; text-shadow: 5px 2px rgb(7, 7, 7); font-weight: bold;">ROBO-FROGGER</h1>
+    <p class="neon-green subtitle" style="color: rgb(0, 255, 234); font-size: 30px; text-shadow: 2px 2px rgb(7, 7, 7); font-weight: bold;">NAVIGATE THE CYBER GRID. AVOID DATA RUNNERS</p>
+
+    <div id="ui-bar">
+        <div>Score: <span id="score" class="neon-yellow">0</span></div>
+        <div>Sector: <span id="level" class="neon-blue">1</span></div>
+        <div>Units: <span id="lives" class="neon-red">3</span></div>
+        <div>High: <span id="high-score">0</span> (<span id="high-name">---</span>)</div>
+    </div>
+
+    <div id="game-container">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        
+        <div id="start-screen" class="overlay">
+            <h1 class="neon-blue">CYBER-FROGGER-JS</h1>
+            <p>NAVIGATE THE CYBER GRID. AVOID DATA RUNNERS</p>
+            <p>ARROWS to Move | P to Pause</p>
+            <button onclick="startGame()">INITIALIZE</button>
+        </div>
+
+        <div id="pause-screen" class="overlay hidden">
+            <h1 class="neon-yellow">SYSTEM PAUSED</h1>
+            <p>Press P to Resume</p>
+        </div>
+
+        <div id="level-transition-screen" class="overlay hidden">
+             <h1 class="neon-blue" style="font-size: 40px;">SECTOR CLEARED</h1>
+             <p class="neon-yellow">INITIALIZING NEXT SECTOR...</p>
+        </div>
+
+        <div id="game-over-screen" class="overlay hidden">
+            <h1 class="neon-red">UNIT TERMINATED</h1>
+            <div id="new-high-score-ui" class="hidden">
+                <p class="neon-pink">NEW HIGH SCORE!</p>
+                <input type="text" id="playerName" maxlength="3" placeholder="AAA">
+                <br>
+                <button onclick="saveHighScore()">SAVE DATA</button>
+            </div>
+            <button id="restart-btn" onclick="startGame()">REBOOT</button>
+        </div>
+    </div>
+
+    <script src="Frog.js"></script>
+</body>
+</html>

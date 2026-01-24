@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ROBO-PONG-JS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://i.ibb.co/9Hh6fMLQ/JavaArcade.png" sizes="200x200">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Pong.css">
+</head>
+<body>
+
+    <nav class="game-nav">
+        <a href="../../index.html" class="back-btn">BACK TO ARCADE HOME</a>
+        </nav>
+<h1 style="font-size: 48px; color: #00d4ff; text-shadow: 0 0 20px #00d4ff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-bottom: 10px;">ROBO-PONG JS</h1>
+
+<div id="hud">
+    <div class="stat-box"><span class="label">Lives</span><span id="lives-val" class="value" style="color: #f71647;">❤❤❤</span></div>
+    <div class="stat-box"><span class="label">Current Score</span><span id="score-val" class="value" style="color: #39f561;">0000</span></div>
+    <div class="stat-box"><span class="label">High Score</span><span id="high-val" class="value" style="color: darkgoldenrod;">0000 (CPU)</span></div>
+</div>
+
+<div id="game-container">
+    <canvas id="pongCanvas" width="800" height="600"></canvas>
+    
+    <div id="start-screen" class="overlay">
+        <h1 style="font-size: 60px; margin: 0;">ROBO-PONG-JS</h1>
+        <p>Use Mouse to Move • P to Pause</p>
+        <button onclick="startGame()">INITIATE SYSTEM</button>
+    </div>
+
+    <div id="game-over-screen" class="overlay hidden">
+        <h1 id="status-text">SYSTEM FAILURE</h1>
+        <div id="high-score-entry" class="hidden">
+            <p>NEW RECORD DETECTED. ENTER ID:</p>
+            <input type="text" id="playerName" maxlength="3" placeholder="AAA">
+            <br>
+            <button onclick="saveScore()">REGISTER</button>
+        </div>
+        <button id="restart-btn" onclick="startGame()">REBOOT</button>
+    </div>
+</div>
+
+<script src="Pong.js"></script>
+</body>
+</html>

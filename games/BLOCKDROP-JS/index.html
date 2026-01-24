@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOCKDROP-JS</title>
+    <link rel="icon" type="image/png" href="https://i.ibb.co/9Hh6fMLQ/JavaArcade.png" sizes="200x200">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Tetris2.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <div class="canvas-area">
+            <div id="start-screen" class="overlay">
+                <h1>BLOCKDROP-JS</h1>
+                <div class="label">High Score 🏆</div>
+                <div id="menu-high-score" class="value" style="margin-bottom: 30px;">0</div>
+                <button class="btn" onclick="startGame()">START GAME</button>
+            </div>
+
+            <div id="game-over-screen" class="overlay" style="display:none;">
+                <h1 style="color: #FF0D72;">GAME OVER</h1>
+                <div class="label">Score</div>
+                <div id="final-score" class="value" style="margin-bottom: 10px;">0</div>
+                <div id="new-best-msg" style="color: #FFE138; display:none; margin-bottom: 20px; font-size: 0.8em;">🌈★ NEW RECORD 🌈★</div>
+                <button class="btn" onclick="startGame()">TRY AGAIN</button>
+            </div>
+
+            <div id="pause-overlay" class="overlay" style="display:none; font-size: 2em; background: rgba(0,0,0,0.6);">PAUSED</div>
+            
+            <canvas id="tetris" width="240" height="400"></canvas>
+        </div>
+
+        <div class="side-panel">
+            <div class="info-box">
+                <div class="label">Next</div>
+                <canvas id="nextPiece" width="100" height="100"></canvas>
+            </div>
+            <div class="info-box"><div class="label">Level 🚀</div><div id="level" class="value">1</div></div>
+            <div class="info-box"><div class="label">Score ★</div><div id="score" class="value">0</div></div>
+            <div class="info-box"><div class="label">High Score 🏆</div><div id="highScore" class="value" style="color: #FFE138;">0</div></div>
+            <div style="font-size: 0.7em; color: #ffd104; text-align: center; font-weight: 400;">
+                <b style="color: rgb(83, 220, 20);">Arrows</b> to move<br><b style="color: rgb(20, 213, 220);">Q/W</b> to rotate<br><b style="color: crimson;">P</b> to <b style="color: crimson;">Pause</b><br><b style="color: rgb(150, 98, 3);">Space</b> to drop
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <nav class="game-nav">
+        <a href="../../index.html" class="back-btn">BACK TO ARCADE HOME</a>
+        </nav>
+    </div>
+
+<script src="Tetris2.js"></script>
+</body>
+</html>

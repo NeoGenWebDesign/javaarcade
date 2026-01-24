@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASTROBLAST-JS</title>
+    <link rel="icon" type="image/png" href="https://i.ibb.co/9Hh6fMLQ/JavaArcade.png" sizes="200x200">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Astro2.css">
+</head>
+<body>
+    <nav class="game-nav">
+        <a href="../../index.html" class="back-btn">BACK TO ARCADE HOME</a>
+        </nav>
+    <h1 style="color: #0000008a; font-size: 40px; font-weight: 800; font-family: Arial, Helvetica, sans-serif; text-shadow: 0 0 10px #f5e504; margin-top: 5%; border: 3px solid #000000; border-radius: 5px; background-color: #000000; box-shadow: 10px 0 10px #f3f702;">ASTROBLAST-JS</h1>
+    <p style="color: rgba(207, 221, 3, 0.603); text-shadow: 0 0 5px #080808; font-weight: 700; font-size: 18px; border: 3px solid #000000; border-radius: 5px; background-color: #000000; box-shadow: 10px 0 10px #f3f702;">Use Arrow Keys to Move, Space to Shoot</p>
+
+    <div class="ui">
+        <h2 style="color: rgb(255, 94, 0); text-shadow: 0 0 5px #f3f702; font-size: 35px; display: flex; gap: 30px; align-items: center;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 10px; background: rgba(243, 242, 160, 0.6); border-radius: 10px; justify-content: space-between;" id="score">SCORE: 0</h2>
+        <div id="highScore">BEST: 0</div>
+        <p style="color: rgb(5, 5, 5); font-weight: 800;text-shadow: #50f702 0 0 5px; font-size: 20px; margin-top: -15px; margin-bottom: 15px;" id="msg">PRESS ANY KEY TO START</p>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+
+<script src="Astro2.js"></script>
+</body>
+</html>
